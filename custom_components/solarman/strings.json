@@ -16,7 +16,8 @@
           "inverter_serial": "[%key:common::config_flow::step::user::data::inverter_serial%]",
           "inverter_port": "[%key:common::config_flow::step::user::data::inverter_port%]",
           "mb_slaveid": "[%key:common::config_flow::step::user::data::mb_slaveid%]",
-          "lookup_file": "[%key:common::config_flow::step::user::data::lookup_file%]"
+          "lookup_file": "[%key:common::config_flow::step::user::data::lookup_file%]",
+          "daylight_only": "[%key:common::config_flow::step::user::data::daylight_only%]"
         }
       }
     }

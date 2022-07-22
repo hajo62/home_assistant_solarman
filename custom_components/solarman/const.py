@@ -14,5 +14,6 @@ CONF_INVERTER_PORT = 'inverter_port'
 CONF_INVERTER_SERIAL = 'inverter_serial'
 CONF_INVERTER_MB_SLAVEID = 'inverter_mb_slaveid'
 CONF_LOOKUP_FILE = 'lookup_file'
+CONF_DAYLIGHT_ONLY = 'daylight_only'
 
 SENSOR_PREFIX = 'Solarman'

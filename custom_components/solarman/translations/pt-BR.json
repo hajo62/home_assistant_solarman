@@ -17,7 +17,8 @@
           "inverter_serial": "Número de série do dispositivo (recuperar da interface da web)",
           "inverter_port": "Porta (geralmente 8899)",
           "mb_slaveid": "Modbus Slave ID (geralmente 1)",
-          "lookup_file": "O arquivo yaml a ser usado para definição de parâmetro"
+          "lookup_file": "O arquivo yaml a ser usado para definição de parâmetro",
+          "daylight_only": "Selecione se o dispositivo funcionar apenas durante o dia"
         }
       }
     }

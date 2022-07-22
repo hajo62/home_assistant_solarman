@@ -21,7 +21,7 @@ from .const import *
 _LOGGER = logging.getLogger(__name__)
 
 
-def step_user_data_schema(data: dict[str, Any] = {CONF_NAME: SENSOR_PREFIX, CONF_INVERTER_PORT: DEFAULT_PORT_INVERTER, CONF_INVERTER_MB_SLAVEID: DEFAULT_INVERTER_MB_SLAVEID, CONF_LOOKUP_FILE: DEFAULT_LOOKUP_FILE}) -> Schema:
+def step_user_data_schema(data: dict[str, Any] = {CONF_NAME: SENSOR_PREFIX, CONF_INVERTER_PORT: DEFAULT_PORT_INVERTER, CONF_INVERTER_MB_SLAVEID: DEFAULT_INVERTER_MB_SLAVEID, CONF_LOOKUP_FILE: DEFAULT_LOOKUP_FILE, CONF_DAYLIGHT_ONLY: DEFAULT_DAYLIGHT_ONLY}) -> Schema:
     _LOGGER.debug(f'config_flow.py:step_user_data_schema: {data}')
     STEP_USER_DATA_SCHEMA = vol.Schema(
         {
@@ -31,6 +31,7 @@ def step_user_data_schema(data: dict[str, Any] = {CONF_NAME: SENSOR_PREFIX, CONF
             vol.Optional(CONF_INVERTER_PORT, default=data.get(CONF_INVERTER_PORT)): int,
             vol.Optional(CONF_INVERTER_MB_SLAVEID, default=data.get(CONF_INVERTER_MB_SLAVEID)): int,
             vol.Optional(CONF_LOOKUP_FILE, default=data.get(CONF_LOOKUP_FILE)): vol.In(LOOKUP_FILES),
+            vol.Optional(CONF_DAYLIGHT_ONLY, default=data.get(CONF_DAYLIGHT_ONLY)): bool,
         },
         extra=vol.PREVENT_EXTRA
     )
@@ -65,7 +66,7 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for SolarMAN logger."""
 
-    VERSION = 1
+    VERSION = 1.0
 
     @staticmethod
     @callback
