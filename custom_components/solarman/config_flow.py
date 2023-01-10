@@ -66,7 +66,7 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for SolarMAN logger."""
 
-    VERSION = 1.0
+    VERSION = 1
 
     @staticmethod
     @callback
