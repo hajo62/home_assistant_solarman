@@ -5,7 +5,7 @@ DOMAIN = 'solarman'
 DEFAULT_PORT_INVERTER = 8899
 DEFAULT_INVERTER_MB_SLAVEID = 1
 DEFAULT_LOOKUP_FILE = 'deye_hybrid.yaml'
-DEFAULT_DAYLIGHT_ONLY = 0
+DEFAULT_DAYLIGHT_ONLY = False
 LOOKUP_FILES = ['deye_4mppt.yaml', 'deye_hybrid.yaml', 'deye_string.yaml',  'sofar_lsw3.yaml', 'sofar_wifikit.yaml', 'solis_hybrid.yaml', 'solis_1p8k-5g.yaml', 'sofar_g3hyd.yaml' , 'sofar_hyd3k-6k.yaml', 'custom_parameters.yaml']
 
 MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=30)
