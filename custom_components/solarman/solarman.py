@@ -185,7 +185,7 @@ class Inverter:
 
     def get_statistics(self):
         # only get data if the sun is up for inverter only installs
-        if not self.daylight_only or is_up(self.hass):
+        if self.daylight_only == False or is_up(self.hass):
             result = 1
             params = ParameterParser(self.parameter_definition)
             for request in self.parameter_definition['requests']:
